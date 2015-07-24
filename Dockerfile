@@ -26,7 +26,7 @@ RUN make
 
 ### make a script for running PBRT
 WORKDIR /usr/local/bin
-RUN echo "/pbrt-v2-spectral/src/bin/pbrt" > /pbrt \
-    && chmod +x /pbrt
+RUN echo "/pbrt-v2-spectral/src/bin/pbrt" > pbrt \
+    && chmod +x pbrt
 
 WORKDIR /home/docker
