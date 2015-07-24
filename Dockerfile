@@ -7,6 +7,7 @@ RUN apt-get update \
     && apt-get install -y \
     bison \
     build-essential \
+    git \
     gsl-bin \
     libgsl0-dev \
     libpng12-dev \
