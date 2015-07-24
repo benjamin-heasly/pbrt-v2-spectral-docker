@@ -25,5 +25,6 @@ WORKDIR pbrt-v2-spectral/src
 RUN make
 
 ### make a script for running PBRT
-RUN echo "/pbrt-v2-spectral/bin/pbrt" > pbrt \
-    && chmod +x pbrt
+WORKDIR /
+RUN echo "/pbrt-v2-spectral/src/bin/pbrt" > /pbrt \
+    && chmod +x /pbrt
