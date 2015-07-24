@@ -23,9 +23,7 @@ RUN apt-get update \
 RUN git clone https://github.com/ydnality/pbrt-v2-spectral.git
 WORKDIR pbrt-v2-spectral/src
 RUN make
-RUN mkdir /pbrt
-RUN cp -r build/* /pbrt
 
 ### make a script for running PBRT
-RUN echo "LD_LIBRARY_PATH=/pbrt /pbrt/pbrt" > run-pbrt \
-    && chmod +x run-pbrt
+RUN echo "/pbrt-v2-spectral/bin/pbrt" > pbrt \
+    && chmod +x pbrt
