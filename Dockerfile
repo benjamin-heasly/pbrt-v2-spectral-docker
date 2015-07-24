@@ -25,6 +25,8 @@ WORKDIR pbrt-v2-spectral/src
 RUN make
 
 ### make a script for running PBRT
-WORKDIR /
+WORKDIR /usr/local/bin
 RUN echo "/pbrt-v2-spectral/src/bin/pbrt" > /pbrt \
     && chmod +x /pbrt
+
+WORKDIR /home/docker
