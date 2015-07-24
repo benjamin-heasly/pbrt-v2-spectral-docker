@@ -20,8 +20,8 @@ RUN apt-get update \
 
 ### build and install PBRT
 RUN git clone https://github.com/ydnality/pbrt-v2-spectral.git
-RUN git checkout rendertoolbox
 WORKDIR pbrt-v2-spectral/src
+RUN git checkout rendertoolbox
 RUN make
 RUN mkdir /pbrt-v2-spectral
 RUN cp -r build/* /pbrt-v2-spectral
