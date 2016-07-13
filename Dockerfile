@@ -24,9 +24,6 @@ RUN git clone https://github.com/ydnality/pbrt-v2-spectral.git
 WORKDIR pbrt-v2-spectral/src
 RUN make
 
-### make a script for running PBRT
-WORKDIR /usr/local/bin
-RUN echo "/pbrt-v2-spectral/src/bin/pbrt" > pbrt \
-    && chmod +x pbrt
+### install pbrt binaries
+RUN cp /pbrt-v2-spectral/src/bin/* /usr/local/bin
 
-WORKDIR /home/docker
